@@ -1,4 +1,5 @@
 import pinyin
+import pyperclip as cb
 
 s=' '
 k=0
@@ -29,8 +30,14 @@ while s !='':
         r.append(z[(p-1)*7+n-1])
     print('-'*25)
 
+ch=''
 for i in r:
     print(i,end='')
+    ch+=i
+
+print('\n')
+cb.copy(ch)
+print('Copied to clipboard')
     
 while True:
     pass
